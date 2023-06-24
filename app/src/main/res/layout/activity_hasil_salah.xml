@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bgpolos"
+    android:orientation="vertical"
+    tools:context=".hasil_salah">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card1"
+        android:layout_width="320dp"
+        android:layout_height="130dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="45dp"
+        app:cardCornerRadius="20dp">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:id="@+id/linear1"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:orientation="horizontal"
+                android:gravity="center_vertical">
+
+                <ImageView
+                    android:id="@+id/centang"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginLeft="18dp"
+                    android:background="@drawable/img"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginTop="8dp"
+                    android:text="1/1"
+                    android:textStyle="bold"
+                    android:textColor="@color/black"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="end"
+                    android:text="Score : 0"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginRight="25dp"
+                    android:textStyle="bold"
+                    android:textColor="@color/black"/>
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="180dp"
+                android:layout_height="wrap_content"
+                android:text="Total Score Anda Adalah 0"
+                android:textColor="#DC0000"
+                android:gravity="center"
+                android:layout_marginTop="10dp"
+                android:textSize="20sp"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@+id/linear1"
+                android:textStyle="bold"/>
+
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <View
+        android:id="@+id/logo"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/blom"
+        android:elevation="2dp" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card2"
+        android:layout_width="320dp"
+        android:layout_height="500dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:layout_below="@+id/card1"
+        app:cardCornerRadius="20dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <View
+                android:id="@+id/iji"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/satu"
+                android:layout_marginTop="15dp" />
+
+            <TextView
+                android:id="@+id/sel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Struktur Sel"
+                android:layout_marginTop="15dp"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@+id/iji"
+                android:textColor="@color/black"/>
+
+            <ImageView
+                android:id="@+id/soal"
+                android:layout_width="200dp"
+                android:layout_height="70dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/pertanyaan"
+                android:layout_below="@+id/sel"
+                android:layout_centerHorizontal="true"/>
+
+            <TextView
+                android:id="@+id/pertanyaan"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="Perhatikan gambar membran sel berikut! Bagian 1, 3, dan 5 adalah …."
+                android:textColor="@color/black"
+                android:layout_centerHorizontal="true"
+                android:textSize="15sp"
+                android:layout_below="@+id/soal"/>
+
+            <Button
+                android:id="@+id/btn1"
+                android:layout_width="280dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@+id/pertanyaan"
+                android:backgroundTint="@color/ijo"
+                android:text="A. protein integral, glikolipid, protein perifer"
+                android:textSize="10sp"/>
+
+            <Button
+                android:id="@+id/btn2"
+                android:layout_width="280dp"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@+id/btn1"
+                android:backgroundTint="#FCE22A"
+                android:textColor="@color/black"
+                android:text="B. protein perifer, fosfolipid, protein integral"
+                android:textSize="10sp"/>
+
+            <Button
+                android:id="@+id/btn3"
+                android:layout_width="280dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/btn2"
+                android:layout_centerHorizontal="true"
+                android:backgroundTint="@color/ijo"
+                android:text="C. glikolipid, fosfolipid, protein perifer"
+                android:textSize="10sp"/>
+
+            <Button
+                android:id="@+id/btn4"
+                android:layout_width="280dp"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@+id/btn3"
+                android:backgroundTint="@color/ijo"
+                android:text="D. glikolipid, fosfolipid, protein integral"
+                android:textSize="10sp"/>
+
+            <View
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_below="@+id/btn4"
+                android:layout_marginTop="6dp"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/satu" />
+
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+
+</RelativeLayout>

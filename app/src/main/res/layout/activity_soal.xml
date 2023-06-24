@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bgpolos"
+    tools:context=".soal">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card1"
+        android:layout_width="320dp"
+        android:layout_height="570dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="45dp"
+        app:cardCornerRadius="20dp">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:id="@+id/linear1"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:orientation="horizontal"
+                android:gravity="center_vertical">
+
+                <ImageView
+                    android:id="@+id/centang"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="18dp"
+                    android:background="@drawable/img"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginTop="8dp"
+                    android:text="1/1"
+                    android:textStyle="bold"
+                    android:textColor="@color/black"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="end"
+                    android:text="Score : 100"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginRight="20dp"
+                    android:textStyle="bold"
+                    android:textColor="@color/black"/>
+
+            </LinearLayout>
+
+            <View
+                android:id="@+id/iji"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/satu"
+                android:layout_marginTop="15dp"
+                android:layout_below="@id/linear1" />
+
+            <TextView
+                android:id="@+id/sel1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_centerHorizontal="true"
+                android:text="Struktur Sel"
+                android:textSize="15sp"
+                android:textColor="@color/black"
+                android:layout_below="@+id/iji"/>
+
+            <ImageView
+                android:id="@+id/soal"
+                android:layout_width="200dp"
+                android:layout_height="70dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/pertanyaan"
+                android:layout_below="@+id/sel1"
+                android:layout_centerHorizontal="true"/>
+
+            <TextView
+                android:id="@+id/pertanyaan"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="Perhatikan gambar membran sel berikut! Bagian 1, 3, dan 5 adalah …."
+                android:textColor="@color/black"
+                android:layout_centerHorizontal="true"
+                android:textSize="17sp"
+                android:layout_below="@+id/soal"/>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="10dp"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@id/pertanyaan">
+
+                <Button
+                    android:id="@+id/jawabanA"
+                    android:layout_width="285dp"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/ijo"
+                    android:text="A. protein integral, glikolipid, protein perifer"
+                    android:textSize="12sp"
+                    android:onClick="onButtonClick"/>
+
+                <Button
+                    android:id="@+id/jawabanB"
+                    android:layout_width="285dp"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/ijo"
+                    android:text="B. protein perifer, fosfolipid, protein integral"
+                    android:textSize="12sp"
+                    android:onClick="onButtonClick"/>
+
+                <Button
+                    android:id="@+id/jawabanC"
+                    android:layout_width="285dp"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/ijo"
+                    android:text="C. glikolipid, fosfolipid, protein perifer"
+                    android:textSize="12sp"
+                    android:onClick="onButtonClick"/>
+
+                <Button
+                    android:id="@+id/jawabanD"
+                    android:layout_width="285dp"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/ijo"
+                    android:text="D. glikolipid, fosfolipid, protein integral"
+                    android:textSize="12sp"
+                    android:onClick="onButtonClick"/>
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <View
+        android:id="@+id/logo"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/blom"
+        android:elevation="2dp" />
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="280dp"
+        android:layout_height="55dp"
+        android:backgroundTint="#B2FFFFFF"
+        android:layout_marginTop="15dp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/card1"
+        app:cardCornerRadius="20dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <View
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:background="@drawable/baseline_lightbulb_24"
+                android:layout_marginLeft="15dp"/>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Hint"
+                    android:textSize="15sp"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Klik jawaban yang menurut anda benar"
+                    android:textSize="11sp"
+                    android:textColor="@color/black"/>
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</RelativeLayout>

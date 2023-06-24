@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/bgpolos"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/biomaster"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:fontFamily="@font/poppins_bold"
+        android:layout_marginTop="105dp"
+        android:text="Biomastery"
+        android:textColor="#fff"
+        android:textSize="35sp"
+        android:textStyle="bold" />
+
+    <View
+        android:id="@+id/blom"
+        android:layout_width="180dp"
+        android:layout_height="180dp"
+        android:layout_marginTop="45dp"
+        android:layout_below="@+id/biomaster"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/blom"/>
+
+    <TextView
+        android:id="@+id/desc"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="60dp"
+        android:text="Sebelum memulai kuis, persiapkan diri kalian dengan belajar terlebih dahulu disecsion MATERI dan berdoa ya!"
+        android:textColor="#fff"
+        android:layout_below="@+id/blom"
+        android:layout_centerHorizontal="true"
+        android:gravity="center"
+        android:textStyle="normal"/>
+
+    <Button
+        android:id="@+id/mulai"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="64dp"
+        android:layout_marginTop="75dp"
+        android:layout_below="@+id/desc"
+        android:backgroundTint="@color/ijo"
+        android:text="Mulai Quiz"
+        android:onClick="onButtonClick"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="64dp"
+        android:backgroundTint="@color/white"
+        android:text="tutorial menjawab quiz"
+        android:textColor="@color/ijo"
+        android:layout_below="@+id/mulai"
+        android:textSize="12sp"
+        android:textStyle="bold"/>
+</RelativeLayout>
