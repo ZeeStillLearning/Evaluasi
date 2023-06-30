@@ -12,6 +12,42 @@
         android:theme="@style/Theme.BioMasteryEvakuasi"
         tools:targetApi="31">
         <activity
+            android:name=".jawaban_benar4"
+            android:exported="false" />
+        <activity
+            android:name=".jawaban_salah5"
+            android:exported="false" />
+        <activity
+            android:name=".jawaban_salah4"
+            android:exported="false" />
+        <activity
+            android:name=".jawaban_benar5"
+            android:exported="false" />
+        <activity
+            android:name=".jawaban_salah3"
+            android:exported="false" />
+        <activity
+            android:name=".jawaban_benar3"
+            android:exported="false" />
+        <activity
+            android:name=".jawaban_salah2"
+            android:exported="false" />
+        <activity
+            android:name=".jawaban_benar2"
+            android:exported="false" />
+        <activity
+            android:name=".soal5"
+            android:exported="false" />
+        <activity
+            android:name=".soal4"
+            android:exported="false" />
+        <activity
+            android:name=".soal3"
+            android:exported="false" />
+        <activity
+            android:name=".soal2"
+            android:exported="false" />
+        <activity
             android:name=".hasil_salah"
             android:exported="false" />
         <activity
@@ -35,6 +71,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".MyApp" />
     </application>
 
 </manifest>

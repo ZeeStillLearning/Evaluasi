@@ -7,6 +7,13 @@
     android:background="@drawable/bgpolos"
     tools:context=".soal">
 
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:visibility="gone" />
+
     <androidx.cardview.widget.CardView
         android:id="@+id/card1"
         android:layout_width="320dp"
@@ -35,20 +42,22 @@
                     android:background="@drawable/img"/>
 
                 <TextView
+                    android:id="@+id/progress"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="8dp"
                     android:layout_marginTop="8dp"
-                    android:text="1/1"
+                    android:text="1/5"
                     android:textStyle="bold"
                     android:textColor="@color/black"/>
 
                 <TextView
+                    android:id="@+id/score"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:gravity="end"
-                    android:text="Score : 100"
+                    android:text="Score : 0"
                     android:layout_marginTop="8dp"
                     android:layout_marginRight="20dp"
                     android:textStyle="bold"
@@ -56,17 +65,23 @@
 
             </LinearLayout>
 
-            <View
-                android:id="@+id/iji"
+            <TextView
+                android:id="@+id/questionNumber"
                 android:layout_width="40dp"
                 android:layout_height="40dp"
                 android:layout_centerHorizontal="true"
-                android:background="@drawable/satu"
-                android:layout_marginTop="15dp"
-                android:layout_below="@id/linear1" />
+                android:layout_below="@+id/linear1"
+                android:background="@drawable/nomor"
+                android:text="1"
+                android:textColor="#FFFFFF"
+                android:textSize="18sp"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:layout_marginTop="10dp"
+                android:padding="8dp" />
 
             <TextView
-                android:id="@+id/sel1"
+                android:id="@+id/jenissoal"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
@@ -74,42 +89,33 @@
                 android:text="Struktur Sel"
                 android:textSize="15sp"
                 android:textColor="@color/black"
-                android:layout_below="@+id/iji"/>
-
-            <ImageView
-                android:id="@+id/soal"
-                android:layout_width="200dp"
-                android:layout_height="70dp"
-                android:layout_marginTop="20dp"
-                android:background="@drawable/pertanyaan"
-                android:layout_below="@+id/sel1"
-                android:layout_centerHorizontal="true"/>
+                android:layout_below="@+id/questionNumber"/>
 
             <TextView
-                android:id="@+id/pertanyaan"
+                android:id="@+id/questionTextView"
                 android:layout_width="250dp"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
-                android:text="Perhatikan gambar membran sel berikut! Bagian 1, 3, dan 5 adalah …."
+                android:layout_marginTop="40dp"
+                android:text="Organel yang berperan sebagai ``Pabrik Tenaga`` sel adalah:"
                 android:textColor="@color/black"
                 android:layout_centerHorizontal="true"
-                android:textSize="17sp"
-                android:layout_below="@+id/soal"/>
+                android:textSize="20sp"
+                android:layout_below="@+id/jenissoal"/>
 
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
-                android:layout_marginTop="10dp"
+                android:layout_marginTop="30dp"
                 android:layout_centerHorizontal="true"
-                android:layout_below="@id/pertanyaan">
+                android:layout_below="@id/questionTextView">
 
                 <Button
                     android:id="@+id/jawabanA"
                     android:layout_width="285dp"
                     android:layout_height="wrap_content"
                     android:backgroundTint="@color/ijo"
-                    android:text="A. protein integral, glikolipid, protein perifer"
+                    android:text="A. Lisosom"
                     android:textSize="12sp"
                     android:onClick="onButtonClick"/>
 
@@ -118,7 +124,7 @@
                     android:layout_width="285dp"
                     android:layout_height="wrap_content"
                     android:backgroundTint="@color/ijo"
-                    android:text="B. protein perifer, fosfolipid, protein integral"
+                    android:text="B. Sentriol"
                     android:textSize="12sp"
                     android:onClick="onButtonClick"/>
 
@@ -127,18 +133,27 @@
                     android:layout_width="285dp"
                     android:layout_height="wrap_content"
                     android:backgroundTint="@color/ijo"
-                    android:text="C. glikolipid, fosfolipid, protein perifer"
+                    android:text="C. Badan Golgi"
                     android:textSize="12sp"
                     android:onClick="onButtonClick"/>
 
                 <Button
                     android:id="@+id/jawabanD"
-                    android:layout_width="285dp"
+                    android:layout_width="289dp"
                     android:layout_height="wrap_content"
                     android:backgroundTint="@color/ijo"
-                    android:text="D. glikolipid, fosfolipid, protein integral"
-                    android:textSize="12sp"
-                    android:onClick="onButtonClick"/>
+                    android:onClick="onButtonClick"
+                    android:text="D. Mitokondria"
+                    android:textSize="12sp" />
+
+                <Button
+                    android:id="@+id/jawabanE"
+                    android:layout_width="289dp"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/ijo"
+                    android:onClick="onButtonClick"
+                    android:text="E. Ribosom"
+                    android:textSize="12sp" />
 
             </LinearLayout>
 

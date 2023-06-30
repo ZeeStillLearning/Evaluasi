@@ -7,6 +7,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 
 public class jawaban_salah extends AppCompatActivity {
 
@@ -17,12 +18,18 @@ public class jawaban_salah extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_jawaban_salah);
 
-        Button ulang = findViewById(R.id.ulang);
-        ulang.setOnClickListener(new View.OnClickListener() {
+        Button lanjut = findViewById(R.id.lanjut);
+
+        int currentScore = MyApp.getScore();
+        TextView scoreTextView = findViewById(R.id.score);
+        scoreTextView.setText("Score: " + currentScore);
+
+        lanjut.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 showProgressDialog();
-                Intent intent = new Intent(jawaban_salah.this, hasil_salah.class);
+                Intent intent = new Intent(jawaban_salah.this, soal2.class);
+                intent.putExtra("score", currentScore);
                 startActivity(intent);
             }
         });

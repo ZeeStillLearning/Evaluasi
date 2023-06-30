@@ -9,26 +9,26 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
-public class jawaban_benar extends AppCompatActivity {
+public class jawaban_benar4 extends AppCompatActivity {
 
     private ProgressDialog progressDialog;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_jawaban_benar);
+        setContentView(R.layout.activity_jawaban_benar4);
 
-        Button lanjut = findViewById(R.id.lanjut);
+        Button lanjut4 = findViewById(R.id.lanjut4);
 
         int currentScore = MyApp.getScore();
         TextView scoreTextView = findViewById(R.id.score);
         scoreTextView.setText("Score: " + currentScore);
 
-        lanjut.setOnClickListener(new View.OnClickListener() {
+        lanjut4.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 showProgressDialog();
-                Intent intent = new Intent(jawaban_benar.this, soal2.class);
+                Intent intent = new Intent(jawaban_benar4.this, soal5.class);
                 intent.putExtra("score", currentScore);
                 startActivity(intent);
             }

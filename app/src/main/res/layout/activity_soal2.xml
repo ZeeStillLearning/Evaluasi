@@ -5,13 +5,19 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/bgpolos"
-    android:orientation="vertical"
-    tools:context=".hasil_eva">
+    tools:context=".soal2">
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:visibility="gone" />
 
     <androidx.cardview.widget.CardView
         android:id="@+id/card1"
         android:layout_width="320dp"
-        android:layout_height="130dp"
+        android:layout_height="570dp"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="45dp"
         app:cardCornerRadius="20dp">
@@ -31,16 +37,17 @@
                     android:id="@+id/centang"
                     android:layout_width="30dp"
                     android:layout_height="30dp"
-                    android:layout_marginTop="8dp"
+                    android:layout_marginTop="10dp"
                     android:layout_marginLeft="18dp"
                     android:background="@drawable/img"/>
 
                 <TextView
+                    android:id="@+id/progress"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="8dp"
                     android:layout_marginTop="8dp"
-                    android:text="5/5"
+                    android:text="2/5"
                     android:textStyle="bold"
                     android:textColor="@color/black"/>
 
@@ -50,26 +57,105 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:gravity="end"
-                    android:text="Score : 100"
+                    android:text="Score : 0"
                     android:layout_marginTop="8dp"
-                    android:layout_marginRight="25dp"
+                    android:layout_marginRight="20dp"
                     android:textStyle="bold"
                     android:textColor="@color/black"/>
 
             </LinearLayout>
 
             <TextView
-                android:id="@+id/total"
-                android:layout_width="180dp"
-                android:layout_height="wrap_content"
-                android:text="Total Score Anda Adalah 100"
-                android:textColor="@color/ijo"
-                android:gravity="center"
-                android:layout_marginTop="10dp"
-                android:textSize="20sp"
+                android:id="@+id/questionNumber"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
                 android:layout_centerHorizontal="true"
                 android:layout_below="@+id/linear1"
-                android:textStyle="bold"/>
+                android:background="@drawable/nomor"
+                android:text="2"
+                android:textColor="#FFFFFF"
+                android:textSize="18sp"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:layout_marginTop="10dp"
+                android:padding="8dp" />
+
+            <TextView
+                android:id="@+id/jenissoal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_centerHorizontal="true"
+                android:text="Lisosom"
+                android:textSize="15sp"
+                android:textColor="@color/black"
+                android:layout_below="@+id/questionNumber"/>
+
+            <TextView
+                android:id="@+id/questionTextView"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/jenissoal"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="40dp"
+                android:text="Apa fungsi utama lisosom dalam sel? "
+                android:textColor="@color/black"
+                android:textSize="20sp" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="30dp"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@id/questionTextView">
+
+                <Button
+                    android:id="@+id/jawabanA"
+                    android:layout_width="285dp"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/ijo"
+                    android:text="A. Sintesis protein"
+                    android:textSize="12sp"
+                    android:onClick="onButtonClick"/>
+
+                <Button
+                    android:id="@+id/jawabanB"
+                    android:layout_width="285dp"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/ijo"
+                    android:text="B. Sintesis lipid"
+                    android:textSize="12sp"
+                    android:onClick="onButtonClick"/>
+
+                <Button
+                    android:id="@+id/jawabanC"
+                    android:layout_width="285dp"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/ijo"
+                    android:text="C. Pencernaan intraselular"
+                    android:textSize="12sp"
+                    android:onClick="onButtonClick"/>
+
+                <Button
+                    android:id="@+id/jawabanD"
+                    android:layout_width="289dp"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/ijo"
+                    android:onClick="onButtonClick"
+                    android:text="D. Transportasi intraselular"
+                    android:textSize="12sp" />
+
+                <Button
+                    android:id="@+id/jawabanE"
+                    android:layout_width="289dp"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/ijo"
+                    android:onClick="onButtonClick"
+                    android:text="E. Produksi energi"
+                    android:textSize="12sp" />
+
+            </LinearLayout>
 
         </RelativeLayout>
 
@@ -85,120 +171,48 @@
         android:elevation="2dp" />
 
     <androidx.cardview.widget.CardView
-        android:id="@+id/card2"
-        android:layout_width="320dp"
-        android:layout_height="500dp"
+        android:layout_width="280dp"
+        android:layout_height="55dp"
+        android:backgroundTint="#B2FFFFFF"
+        android:layout_marginTop="15dp"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="20dp"
         android:layout_below="@+id/card1"
         app:cardCornerRadius="20dp">
 
-        <RelativeLayout
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
 
-            <TextView
-                android:id="@+id/questionNumber"
-                android:layout_width="40dp"
-                android:layout_height="40dp"
-                android:layout_centerHorizontal="true"
-                android:background="@drawable/nomor"
-                android:text="5"
-                android:textColor="#FFFFFF"
-                android:textSize="18sp"
-                android:gravity="center"
-                android:textStyle="bold"
-                android:layout_marginTop="20dp"
-                android:padding="8dp" />
-
-            <TextView
-                android:id="@+id/jenissoal"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
-                android:layout_centerHorizontal="true"
-                android:text="Nukleus"
-                android:textSize="15sp"
-                android:textColor="@color/black"
-                android:layout_below="@+id/questionNumber"/>
-
-            <TextView
-                android:id="@+id/questionTextView"
-                android:layout_width="250dp"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/jenissoal"
-                android:layout_centerHorizontal="true"
-                android:layout_marginTop="20dp"
-                android:text="Apa yang mengatur sintesis protein dalam sel?"
-                android:textColor="@color/black"
-                android:textSize="20sp" />
+            <View
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:background="@drawable/baseline_lightbulb_24"
+                android:layout_marginLeft="15dp"/>
 
             <LinearLayout
-                android:id="@+id/Linear"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:gravity="center"
-                android:layout_marginTop="30dp"
-                android:layout_centerHorizontal="true"
-                android:layout_below="@id/questionTextView">
-
-                <Button
-                    android:id="@+id/jawabanA"
-                    android:layout_width="285dp"
-                    android:layout_height="wrap_content"
-                    android:backgroundTint="@color/ijo"
-                    android:text="A. Membran Sel"
-                    android:textSize="12sp" />
-
-                <Button
-                    android:id="@+id/jawabanB"
-                    android:layout_width="285dp"
-                    android:layout_height="wrap_content"
-                    android:backgroundTint="@color/ijo"
-                    android:text="B. Lisosom"
-                    android:textSize="12sp" />
-
-                <Button
-                    android:id="@+id/jawabanC"
-                    android:layout_width="285dp"
-                    android:layout_height="wrap_content"
-                    android:backgroundTint="#FFE569"
-                    android:textColor="#000"
-                    android:text="C. Nukleus"
-                    android:textSize="12sp"/>
-
-                <Button
-                    android:id="@+id/jawabanD"
-                    android:layout_width="289dp"
-                    android:layout_height="wrap_content"
-                    android:backgroundTint="@color/ijo"
-                    android:text="D. Sentriol"
-                    android:textSize="12sp" />
-
-                <Button
-                    android:id="@+id/jawabanE"
-                    android:layout_width="289dp"
-                    android:layout_height="wrap_content"
-                    android:backgroundTint="@color/ijo"
-                    android:text="E. Ribosom"
-                    android:textSize="12sp" />
+                android:orientation="vertical">
 
                 <TextView
-                    android:layout_width="40dp"
-                    android:layout_height="40dp"
-                    android:background="@drawable/nomor"
-                    android:text="5"
-                    android:textColor="#FFFFFF"
-                    android:textSize="18sp"
-                    android:gravity="center"
-                    android:textStyle="bold"
-                    android:layout_marginTop="10dp"
-                    android:padding="8dp" />
-
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Hint"
+                    android:textSize="15sp"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Klik jawaban yang menurut anda benar"
+                    android:textSize="11sp"
+                    android:textColor="@color/black"/>
             </LinearLayout>
 
-        </RelativeLayout>
+        </LinearLayout>
+
     </androidx.cardview.widget.CardView>
 
 </RelativeLayout>

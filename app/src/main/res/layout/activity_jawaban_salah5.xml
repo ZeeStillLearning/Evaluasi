@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/bgpolos"
-    tools:context=".jawaban_salah">
+    tools:context=".jawaban_salah5">
 
     <androidx.cardview.widget.CardView
         android:id="@+id/card1"
@@ -40,7 +40,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="8dp"
                     android:layout_marginTop="8dp"
-                    android:text="1/5"
+                    android:text="5/5"
                     android:textColor="@color/black"
                     android:textStyle="bold" />
 
@@ -52,7 +52,7 @@
                     android:layout_marginRight="25dp"
                     android:layout_weight="1"
                     android:gravity="end"
-                    android:text="Score : 0"
+                    android:text="Score : 100"
                     android:textColor="@color/black"
                     android:textStyle="bold" />
 
@@ -65,7 +65,7 @@
                 android:layout_centerHorizontal="true"
                 android:layout_below="@+id/linear1"
                 android:background="@drawable/nomor"
-                android:text="1"
+                android:text="5"
                 android:textColor="#FFFFFF"
                 android:textSize="18sp"
                 android:gravity="center"
@@ -80,7 +80,7 @@
                 android:layout_below="@+id/questionNumber"
                 android:layout_centerHorizontal="true"
                 android:layout_marginTop="20dp"
-                android:text="Struktur Sel"
+                android:text="Nukleus"
                 android:textColor="@color/black"
                 android:textSize="15sp" />
 
@@ -102,12 +102,12 @@
                 android:id="@+id/questionTextView"
                 android:layout_width="250dp"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
-                android:text="Organel yang berperan sebagai ``Pabrik Tenaga`` sel adalah:"
-                android:textColor="@color/black"
+                android:layout_below="@+id/Validasi"
                 android:layout_centerHorizontal="true"
-                android:textSize="17sp"
-                android:layout_below="@+id/Validasi"/>
+                android:layout_marginTop="20dp"
+                android:text="Apa yang mengatur sintesis protein dalam sel?"
+                android:textColor="@color/black"
+                android:textSize="20sp" />
 
             <TextView
                 android:id="@+id/Penjelasan"
@@ -116,7 +116,7 @@
                 android:layout_below="@+id/questionTextView"
                 android:layout_centerHorizontal="true"
                 android:layout_marginTop="18dp"
-                android:text="Mitokondria berperan sebagai pabrik tenaga sel. Mitokondria adalah struktur membran ganda yang hadir di hampir semua sel eukariotik. Fungsi utamanya adalah menghasilkan energi dalam bentuk adenosin trifosfat (ATP) melalui respirasi seluler. \n \n Mitokondria memiliki rantai transport elektron yang menghasilkan gradien elektrokimia melintasi membran mitokondria. Ini memungkinkan enzim ATP sintase menghasilkan ATP, molekul energi yang digunakan oleh sel. Mitokondria juga memiliki DNA dan ribosom sendiri, menunjukkan kemampuannya untuk replikasi dan sintesis protein mandiri. Mitokondria berperan penting dalam produksi energi dalam sel melalui respirasi seluler, mendukung berbagai fungsi seluler dan pemeliharaan kehidupan sel."
+                android:text="Nukleus mengatur sintesis protein dalam sel. Nukleus, yang mengandung DNA, bertanggung jawab atas transkripsi DNA menjadi mRNA. mRNA kemudian mengarah ke ribosom di sitoplasma, di mana proses translasi terjadi untuk menghasilkan protein. Nukleus berperan penting dalam mengatur ekspresi gen dan mengendalikan produksi protein dalam sel. \n \n Protein Secara keseluruhan, nukleus berperan sebagai pengatur utama dalam sintesis protein dalam sel. Melalui proses transkripsi dan regulasi ekspresi gen, nukleus mengontrol produksi mRNA yang membawa informasi genetik untuk sintesis protein. Dengan demikian, nukleus memiliki peran sentral dalam pengaturan dan koordinasi sintesis protein, yang penting untuk fungsi dan aktivitas sel yang optimal."
                 android:textColor="@color/black"
                 android:textSize="12sp" />
 
@@ -135,7 +135,7 @@
         android:elevation="2dp" />
 
     <Button
-        android:id="@+id/lanjut"
+        android:id="@+id/lanjut05"
         android:layout_width="250dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="15dp"

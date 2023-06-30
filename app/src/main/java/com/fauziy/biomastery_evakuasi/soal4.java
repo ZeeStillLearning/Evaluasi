@@ -9,14 +9,18 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
-public class soal extends AppCompatActivity {
+public class soal4 extends AppCompatActivity {
 
     private ProgressDialog progressDialog;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_soal);
+        setContentView(R.layout.activity_soal4);
+
+        int currentScore = MyApp.getScore();
+        TextView scoreTextView = findViewById(R.id.score);
+        scoreTextView.setText("Score: " + currentScore);
 
         Button jawabanA = findViewById(R.id.jawabanA);
         jawabanA.setOnClickListener(new View.OnClickListener() {
@@ -24,10 +28,7 @@ public class soal extends AppCompatActivity {
             public void onClick(View v) {
                 showProgressDialog();
                 MyApp.incrementScore(0);
-                int currentScore = MyApp.getScore();
-                TextView scoreTextView = findViewById(R.id.score);
-                scoreTextView.setText("Score: " + currentScore);
-                Intent intent = new Intent(soal.this, jawaban_salah.class);
+                Intent intent = new Intent(soal4.this, jawaban_salah4.class);
                 startActivity(intent);
             }
         });
@@ -38,10 +39,7 @@ public class soal extends AppCompatActivity {
             public void onClick(View v) {
                 showProgressDialog();
                 MyApp.incrementScore(0);
-                int currentScore = MyApp.getScore();
-                TextView scoreTextView = findViewById(R.id.score);
-                scoreTextView.setText("Score: " + currentScore);
-                Intent intent = new Intent(soal.this, jawaban_salah.class);
+                Intent intent = new Intent(soal4.this, jawaban_salah4.class);
                 startActivity(intent);
             }
         });
@@ -52,10 +50,7 @@ public class soal extends AppCompatActivity {
             public void onClick(View v) {
                 showProgressDialog();
                 MyApp.incrementScore(0);
-                int currentScore = MyApp.getScore();
-                TextView scoreTextView = findViewById(R.id.score);
-                scoreTextView.setText("Score: " + currentScore);
-                Intent intent = new Intent(soal.this, jawaban_salah.class);
+                Intent intent = new Intent(soal4.this, jawaban_salah4.class);
                 startActivity(intent);
             }
         });
@@ -65,11 +60,8 @@ public class soal extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 showProgressDialog();
-                MyApp.incrementScore(100);
-                int currentScore = MyApp.getScore();
-                TextView scoreTextView = findViewById(R.id.score);
-                scoreTextView.setText("Score: " + currentScore);
-                Intent intent = new Intent(soal.this, jawaban_benar.class);
+                MyApp.incrementScore(0);
+                Intent intent = new Intent(soal4.this, jawaban_salah4.class);
                 startActivity(intent);
             }
         });
@@ -79,11 +71,8 @@ public class soal extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 showProgressDialog();
-                MyApp.incrementScore(0);
-                int currentScore = MyApp.getScore();
-                TextView scoreTextView = findViewById(R.id.score);
-                scoreTextView.setText("Score: " + currentScore);
-                Intent intent = new Intent(soal.this, jawaban_salah.class);
+                MyApp.incrementScore(100);
+                Intent intent = new Intent(soal4.this, jawaban_benar4.class);
                 startActivity(intent);
             }
         });
